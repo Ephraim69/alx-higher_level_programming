@@ -8,24 +8,19 @@
 */
 int check_cycle(listint_t *list)
 {
-	void *first;
-	listint_t *tmp = list;
-	int i = 0;
+	listint_t *prv = list;
+	listint_t *nxt = list;
 
-	if (list == NULL)
+	if (!list)
 		return (0);
 
-	first = (void *) list;
-
-	while (tmp != NULL)
+	while (prv && nxt && nxt->next)
 	{
-		if (i != 0)
-			if (first == (void *) tmp)
-				return (1);
+		prv = prv->next;
+		nxt = nxt->next->next;
 
-		i++;
-		tmp = tmp->next;
+		if (prv == nxt)
+			return (1);
 	}
-
 	return (0);
 }
