@@ -10,6 +10,7 @@ int check_cycle(listint_t *list)
 {
 	void *first;
 	listint_t *tmp = list;
+	int i = 0;
 
 	if (list == NULL)
 		return (0);
@@ -18,9 +19,12 @@ int check_cycle(listint_t *list)
 
 	while (tmp != NULL)
 	{
+		if (i != 0)
+			if (first == (void *) tmp)
+				return (1);
+
+		i++;
 		tmp = tmp->next;
-		if (first == (void *) tmp)
-			return (1);
 	}
 
 	return (0);
