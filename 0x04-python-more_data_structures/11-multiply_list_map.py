@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def multiply_list_map(my_list=[], number=0):
-    return (new_list := list(map(lambda x: x * 4, my_list)))
+    new_list = my_list.copy()
+    return list(map(lambda x: x * 4, new_list))
