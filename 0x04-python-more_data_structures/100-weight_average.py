@@ -3,12 +3,12 @@ def weight_average(my_list=[]):
     if my_list is None:
         return 0
 
-    prod = []
+    prod = 0
     denom = 0
 
     for i, j in my_list:
-        prod.append(i * j)
+        prod += (i * j)
         denom += j
 
-    avg = sum(prod) / denom
+    avg = prod / denom
     return avg
