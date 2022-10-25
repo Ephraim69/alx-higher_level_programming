@@ -14,4 +14,4 @@ class MyList(list):
         """
         new_list = self[:]
         new_list.sort()
-        print(f"{new_list}")
+        print("{}".format(new_list))
