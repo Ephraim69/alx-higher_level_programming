@@ -1,0 +1,18 @@
+1-my_list Module documentation
+
+Import the class:
+    >>> MyList = __import__('1-my_list').MyList
+
+Testing it:
+    >>> my_list = MyList()
+    >>> my_list.append(3)
+    >>> print(my_list)
+    [3]
+    >>> my_list.append(4)
+    >>> my_list.append("Hello world")
+    >>> my_list.append(1, 2, 3)
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    TypeError: list.append() takes exactly one argument (3 given)
+    >>> print(my_list)
+    [3, 4, 'Hello world']
