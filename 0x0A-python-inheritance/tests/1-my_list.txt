@@ -1,18 +1,53 @@
-1-my_list Module documentation
+=============================
+The ``1-my_list`` module
+=============================
+
+Using ``MyList``
+---------------------
 
 Import the class:
+
     >>> MyList = __import__('1-my_list').MyList
 
-Testing it:
+Now test it:
+
     >>> my_list = MyList()
-    >>> my_list.append(3)
-    >>> print(my_list)
-    [3]
+
+    >>> my_list
+    []
+
+    >>> my_list.append(1)
+
     >>> my_list.append(4)
-    >>> my_list.append("Hello world")
-    >>> my_list.append(1, 2, 3)
-    Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-    TypeError: list.append() takes exactly one argument (3 given)
-    >>> print(my_list)
-    [3, 4, 'Hello world']
+
+    >>> my_list.append(2)
+
+    >>> my_list
+    [1, 4, 2]
+
+    >>> my_list.print_sorted()
+    [1, 2, 4]
+
+    >>> my_list
+    [1, 4, 2]
+
+    >>> my_list = MyList([3, 6, 2])
+
+    >>> my_list
+    [3, 6, 2]
+
+    >>> my_list.print_sorted()
+    [2, 3, 6]
+
+    >>> my_list = MyList("hello")
+
+    >>> my_list
+    ['h', 'e', 'l', 'l', 'o']
+
+    >>> my_list.print_sorted()
+    ['e', 'h', 'l', 'l', 'o']
+
+    >>> new_l = MyList()
+
+    >>> new_l.print_sorted()
+    []
