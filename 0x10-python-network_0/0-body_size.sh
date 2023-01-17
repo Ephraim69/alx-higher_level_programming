@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Bash script that displays size of a HTTP response body
 if [ $# -eq 1 ];
 then
